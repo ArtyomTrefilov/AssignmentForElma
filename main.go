@@ -10,7 +10,9 @@ import (
 )
 
 func main() {	
-	countStr := make(chan string, 5)	 	
+	/*Канал передачи количества вхождений строки*/
+	countStr := make(chan string, 5)	 
+	/*Общее количество найденных строк*/
 	total := 0
 	for _, url := range os.Args[1:] {
 		go getCountStr(url, countStr)
